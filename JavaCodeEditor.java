@@ -10,6 +10,10 @@ class JavaCodeEditor{
 		BufferedReader br = new BufferedReader(new FileReader(name));
 		String code = br.readLine();
 		code = 	edit(code);
+		name="Edit_"+name;
+		BufferedWriter bw = new BufferedWriter(new FileWriter(name));
+		bw.write(code);
+		bw.close();
 	}
 	public static String edit(String code){
 		code = code.replaceAll(";", "; \n ");
