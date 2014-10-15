@@ -6,6 +6,8 @@ class JavaCodeEditor{
 	{
 		Scanner in = new Scanner(System.in);
 		System.out.println("Enter name of file, which will change.");
-		String name = in.nextLine();	
+		String name = in.nextLine();
+		BufferedReader br = new BufferedReader(new FileReader(name));
+		String code = br.readLine();	
 	}
 }
